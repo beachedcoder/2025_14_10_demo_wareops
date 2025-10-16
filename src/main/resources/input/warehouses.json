@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Providence Distribution Center",
+    "address": "1234 Industrial Way",
+    "city": "Providence",
+    "state": "RI",
+    "postal_code": "02903",
+    "warehouse_phone": "(401) 555-0101",
+    "square_footage": 1500000,
+    "loading_docks": 15
+  },
+  {
+    "name": "Albany Regional Warehouse",
+    "address": "5678 Commerce Blvd",
+    "city": "Albany",
+    "state": "NY",
+    "postal_code": "12205",
+    "warehouse_phone": "(518) 555-0201",
+    "square_footage": 600000,
+    "loading_docks": 36
+  },
+  {
+    "name": "Newark Logistics Hub",
+    "address": "9012 Freight Avenue",
+    "city": "Newark",
+    "state": "NJ",
+    "postal_code": "07102",
+    "warehouse_phone": "(973) 555-0301",
+    "square_footage": 250000,
+    "loading_docks": 24
+  },
+  {
+    "name": "Philadelphia Storage Facility",
+    "address": "3456 Warehouse Drive",
+    "city": "Philadelphia",
+    "state": "PA",
+    "postal_code": "19104",
+    "warehouse_phone": "(215) 555-0401",
+    "square_footage": 180000,
+    "loading_docks": 15
+  },
+  {
+    "name": "Richmond Distribution Point",
+    "address": "7890 Supply Chain Road",
+    "city": "Richmond",
+    "state": "VA",
+    "postal_code": "23230",
+    "warehouse_phone": "(804) 555-0501",
+    "square_footage": 175000,
+    "loading_docks": 14
+  },
+  {
+    "name": "Charlotte Fulfillment Center",
+    "address": "2468 Logistics Lane",
+    "city": "Charlotte",
+    "state": "NC",
+    "postal_code": "28202",
+    "warehouse_phone": "(704) 555-0601",
+    "square_footage": 3000000,
+    "loading_docks": 30
+  },
+  {
+    "name": "Jacksonville Coastal Warehouse",
+    "address": "1357 Port Access Road",
+    "city": "Jacksonville",
+    "state": "FL",
+    "postal_code": "32202",
+    "warehouse_phone": "(904) 555-0701",
+    "square_footage": 280000,
+    "loading_docks": 20
+  },
+  {
+    "name": "Houston Energy District Depot",
+    "address": "8642 Petroleum Plaza",
+    "city": "Houston",
+    "state": "TX",
+    "postal_code": "77002",
+    "warehouse_phone": "(713) 555-0801",
+    "square_footage": 550000,
+    "loading_docks": 35
+  },
+  {
+    "name": "Sioux Falls Agricultural Center",
+    "address": "9753 Prairie Commerce Way",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "postal_code": "57104",
+    "warehouse_phone": "(605) 555-0901",
+    "square_footage": 120000,
+    "loading_docks": 10
+  }
+]
