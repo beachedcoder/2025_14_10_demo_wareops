@@ -44,7 +44,21 @@ use logging for error and debug in this service
 
 
 step 9:
-Create input directory in test resources and copy warehouses.json then rename it to test-warehouses.json
+Create input directory in test resources directory hierachy and copy warehouses.json then rename it to test-warehouses.json
 
-copy application.properties to test resources directory
-create a test for WarehouseDTOCacheService to audit data loading, prove bad file name gets logged, prove missing file gets logged
+step 10:
+create a test for WarehouseDTOCacheService in service subpackage of test to audit data loading, prove bad file name gets logged, prove missing file gets logged
+
+steps 11: add WarehouseOperationsManagementApplication class to the subpackage above config annotated as spring boot application with spring application run in main method
+
+step 12:
+add WarehouseManagementController in the controller subpackage, annotate as a restcontroller and Request mapping of "/whoms/v2/" only accepting json inbound data and returning json outbound data
+
+step 13: 
+add a ControllerAdvice class named GlobalExceptionHandler in config subpackage that handles all exceptions from controllers to map bad request, bad content type, no matching request, exceptions, runtime exceptions.  Create a ErrorResponseDTO record in domain subpackage with fields: String message, int errorCode, UUID messageId.  Use the uuid returned in the message in the log entry of the exception captured.  create a single generic error message "Our apologies for fumbling your request" in the global exception handler
+
+step 14:
+create a warehouse bean entity for persistence in subpackage domain that has properties of WarehouseDTO plus uuid id. this entity will be used with spring jpa repository interface named WarehouseJpaRepository in the repository subpackage with findByName, findByPostalCode, findByPhone
+
+step 15:
+create a WarehouseManagerService with interface in service subpackage with method to persistWarehouseDTO, this method will validate inbound WarehouseDTO using ExtDataValidationService before calling private internal method to convert WarehouseDTO to entity Warehouse to persist the entity.  another method warehouseLookUp that accepts generic parameter, validates that parameters using WarehouseDTOPatterns using method of ExtDataValidationService, if valid then uses JpaRepository to search by name, by postal code, or by phone.  logging any exceptions as they occur but throwing exceptions back to caller.  another method for addPerspectiveWarehouse that validates the entity prior to persisting with the jpa repository.  another method updateWarehouseInformation that accepts and entity, validates it and then uses jpa to update persisted entity.
